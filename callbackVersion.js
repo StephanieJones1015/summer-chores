@@ -1,45 +1,79 @@
-function mowYard(callback) {
-     setTimeout(() => {
-            console.log("You mowed the yard");
-            callback();
-        }, 2000);
+let name= 'SpongeBob';
+
+function mowYard(name, callback) {
+    setTimeout(() => {
+        console.log(`${name} mowed the yard`);
+        callback(weedEat);
+    }, 2000);
 }
 
-function weedEat(callback) {
+function weedEat(name, callback) {
     setTimeout(() => {
-        console.log("You finished using the weed eater");
-        callback();
+        if (Math.random() > 0.01) {
+            console.log(`${name} finished using the weed eater`);
+            callback(trimHedges);
+        } else {
+            console.log(`${name} fell asleep after mowing the yard`);
+        }
     }, 1500);
 }
-function trimHedges(callback) {
+
+function trimHedges(name, callback) {
     setTimeout(() => {
-        console.log("You finished trimming the hedges");
-        callback();
+        if (Math.random() > 0.05) {
+            console.log(`${name} finished trimming the hedges`);
+             callback();
+        } else {
+            console.log(`${name} fell asleep after weed eating the yard`);
+        }
     }, 1000);
 
 }
-function collectWood(callback) {
+
+function collectWood(name, callback) {
     setTimeout(() => {
-        console.log("You finished collecting the wood"); 
-        callback();   
+        if (Math.random() >0.03) {
+            console.log(`${name} finished collecting the wood`); 
+            callback();  
+        } else  {
+            console.log(`${name} fell asleep after trimming the hedges`);
+        }
     }, 2500);
 }
-function waterGarden(callback) {
+
+function waterGarden(name, callback) {
     setTimeout(() => {
-        console.log("You finished watering the garden"); 
-        callback();   
-    }, 500);
+        if (Math.random() >0.01) {
+            console.log(`${name} finished watering the garden`); 
+            callback();  
+        } else  {
+            console.log(`${name} fell asleep after collecting wood`)
+        }
+            }, 500);
 }
 
-
-
-
-mowYard(() => {
-    weedEat(() => {
-        trimHedges(() => {
-            collectWood(() => {
-                waterGarden (() => console.log("You finsihed all their chores!"));
+function doSummerChores(name)
+{
+    mowYard(name, () => {
+        weedEat(name, () => {
+            trimHedges(name, () => {
+                collectWood(name, () => {
+                    waterGarden(name, () => {
+                        finishedChores(name);
+                    });
+                });
             });
         });
     });
-});
+}
+
+
+
+function finishedChores(name)
+{
+    console.log(`${name} finished all their chores!`);
+}
+
+doSummerChores("spongeBob");
+
+
