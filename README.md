@@ -8,4 +8,7 @@ We are told in the instructions to "think about how random number generation wor
 
 After adding the very first else if statement, I consoled the result to make sure that the code continued to work. After making sure that it did, I continued adding the statements to the rest of the code.
 
+After getting the output to work and the statements said "You did this or that" I read the directions again and noticed that there were two arguments for the function which included a name and a callback- not just the callback. I went back and added a name and then added name to each function. This caused an error, which I had to figure out.
+
+
 
