@@ -50,7 +50,7 @@ function collectWood(name) {
     
 }
 
-function waterGardem(name) {
+function waterGarden(name) {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
             if (Math.random() >0.01) {
@@ -71,7 +71,7 @@ function doSummerChores(name)
     mowYard(name).then(value => { console.log(value); return weedEat(name) })
                  .then(value => { console.log(value); return trimHedges(name) })
                  .then(value => {console.log(value); return collectWood(name) })
-                 .then(value => {console.log(value); return waterGardem(name) })
+                 .then(value => {console.log(value); return waterGarden(name) })
                  .then(value => {console.log(value); return finishedChores(name) })
                  .catch(error => console.error(error));
 }
