@@ -12,7 +12,7 @@ After getting the output to work and the statements said "You did this or that" 
 
 Added a file named promiseVersion.js. On this file I changed all the code from callbacks to promises. I also chained the promises to replace the callback hell on the callbackVersion.js page. I used node.js to result or console each chore as I went. I found that I had to do the chain of promises prior to being able to visualize the result. 
 
-
+Added a file named asyncAwaitVersion.js. On this file, I copied the code from the promiseVersion file since the instructions mentioned promises and pasted it into the asyn file. I then updated the doSummerChores function to use async and await instead of chaining the promises. I attempted to do this without using try and catch but it gave me an error of unhandledPromiseRejection which I found the error and corrected it. As a result I added try and catch. After running the file in node.js and changing some issues the code runs correclty and completes all the chores.
 
 
 
