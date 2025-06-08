@@ -10,5 +10,9 @@ After adding the very first else if statement, I consoled the result to make sur
 
 After getting the output to work and the statements said "You did this or that" I read the directions again and noticed that there were two arguments for the function which included a name and a callback- not just the callback. I went back and added a name and then added name to each function. This caused an error, which I had to figure out.
 
+Added a file named promiseVersion.js. On this file I changed all the code from callbacks to promises. I also chained the promises to replace the callback hell on the callbackVersion.js page. I used node.js to result or console each chore as I went. I found that I had to do the chain of promises prior to being able to visualize the result. 
+
+
+
 
 
